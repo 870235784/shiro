@@ -109,6 +109,7 @@
 			myRealm2=MyRealm2
 			securityManager.realms=$myRealm1,$myRealm2
 		step3: 写业务代码
+			见 com.tca.chapter1.MyRealmTest的testRealmAuthenticationStrategy方法
 			
 		
 		
