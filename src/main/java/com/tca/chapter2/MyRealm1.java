@@ -1,4 +1,4 @@
-package com.tca.chapter1;
+package com.tca.chapter2;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

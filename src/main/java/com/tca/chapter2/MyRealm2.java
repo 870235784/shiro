@@ -1,4 +1,4 @@
-package com.tca.chapter1;
+package com.tca.chapter2;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -9,11 +9,11 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.realm.Realm;
 
-public class MyRealm implements Realm{
+public class MyRealm2 implements Realm{
 
 	@Override
 	public String getName() {
-		return "myRealm";
+		return "myRealm-2";
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class MyRealm implements Realm{
 	public AuthenticationInfo getAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
 		String username = (String) token.getPrincipal();
 		String password = new String((char[])token.getCredentials());
-		if (!"zhou".equals(username)) {
+		if (!"tca".equals(username)) {
 			throw new UnknownAccountException();
 		}
 		if (!"123".equals(password)) {
