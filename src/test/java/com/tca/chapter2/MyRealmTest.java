@@ -18,7 +18,7 @@ public class MyRealmTest extends SpringbootShiroApplicationTests{
 	@Test
 	public void testMyRealm() {
 		// 第一步:根据shiro.ini配置文件创建IniSecurityManagerFactory工厂类
-		IniSecurityManagerFactory iniSecurityManagerFactory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
+		IniSecurityManagerFactory iniSecurityManagerFactory = new IniSecurityManagerFactory("classpath:chapter2/shiro-realm.ini");
 		// 第二步:创建SecurityManager实例
 		SecurityManager securityManager = iniSecurityManagerFactory.getInstance();
 		// 第三步:绑定到SecurityUtils
@@ -39,7 +39,7 @@ public class MyRealmTest extends SpringbootShiroApplicationTests{
 	@Test
 	public void testMyRealmMulti() {
 		// 第一步:根据shiro.ini配置文件创建IniSecurityManagerFactory工厂类
-		IniSecurityManagerFactory iniSecurityManagerFactory = new IniSecurityManagerFactory("classpath:shiro-realm-multi.ini");
+		IniSecurityManagerFactory iniSecurityManagerFactory = new IniSecurityManagerFactory("classpath:chapter2/shiro-realm-multi.ini");
 		// 第二步:创建SecurityManager实例
 		SecurityManager securityManager = iniSecurityManagerFactory.getInstance();
 		// 第三步:绑定到SecurityUtils
@@ -61,7 +61,7 @@ public class MyRealmTest extends SpringbootShiroApplicationTests{
 	public void testRealmAuthenticationStrategy() {
 		// 第一步:根据shiro.ini配置文件创建IniSecurityManagerFactory工厂类
 		IniSecurityManagerFactory iniSecurityManagerFactory = new IniSecurityManagerFactory(
-				"classpath:shiro-realm-authentication-strategy.ini");
+				"classpath:chapter2/shiro-realm-authentication-strategy.ini");
 		// 第二步:创建SecurityManager实例
 		SecurityManager securityManager = iniSecurityManagerFactory.getInstance();
 		// 第三步:绑定到SecurityUtils
