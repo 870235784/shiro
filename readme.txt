@@ -215,6 +215,23 @@
 	暂略
 		
 		
+第四章 ini配置
+1.根对象SecutiryManager
+	SecutiryManager是根对象,需要为其绑定对应的Authenticator和Authorizer,以及对应的Realm
+2.ini配置
+	
+
+
+
+
+
+
+
+
+
+
+
+
 		
 		
 		
