@@ -27,7 +27,7 @@
 	
 2.身份认证流程
 	2.1 步骤:
-		step1:首先调用Subject.login(token)进行登录，其会自动委托给Security Manager，调用之前必须通过SecurityUtils. setSecurityManager()设置；
+		step1:首先调用Subject.login(token)进行登录，其会自动委托给Security Manager，调用之前必须通过SecurityUtils.setSecurityManager()设置；
 		step2:SecurityManager负责真正的身份验证逻辑；它会委托给Authenticator进行身份验证；
 		step3:Authenticator才是真正的身份验证者，Shiro API中核心的身份认证入口点，此处可以自定义插入自己的实现；
 		step4:Authenticator可能会委托给相应的AuthenticationStrategy进行多Realm身份验证，默认ModularRealmAuthenticator会调用
@@ -219,6 +219,16 @@
 1.根对象SecutiryManager
 	SecutiryManager是根对象,需要为其绑定对应的Authenticator和Authorizer,以及对应的Realm
 2.ini配置
+	2.1 配置主体
+		[main]
+		[users]
+		[roles]
+		[urls]
+	2.2 书写规则
+		对象名=全限定类名    相对于调用public 无参构造器创建对象
+		对象名.属性名=值    相当于调用setter方法设置常量值
+		对象名.属性名=$对象引用    相当于调用setter方法设置对象引用
+		
 	
 
 
