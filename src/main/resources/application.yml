@@ -1,0 +1,39 @@
+server:
+  port: 7777
+
+logging:
+   config: classpath:logback.xml
+   
+# mybatis相关配置
+#  配置数据源
+spring:
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://172.16.19.28:3306/aicloud_intelligent_enterprise?useUnicode=true&characterEncoding=utf-8&generateSimpleParameterMetadata=true
+      username: ENC(NzkqXk8hYpNUFPPTEbQJaw==)
+      password: ENC(hLxvhGwikoMnX3SQUfDBEQkMOZPOEZWr)
+   druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+
+# 映射文件路径
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*Mapper.xml
+  
+jasypt:
+   encryptor:
+      password: hfai
+  
+
+
+

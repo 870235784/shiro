@@ -40,6 +40,14 @@ public class BASE64Test {
         System.out.println("完成!");
 	}
 	
+	@Test
+	public void jdk8_base64_test() {
+		String content = "hello world";
+		String encodeResult = base64Encode(content);
+		String decodeResult = new String(base64Decode(encodeResult));
+		System.out.println(content.equals(decodeResult));
+	}
+	
 	/**
 	 * 使用BASE64编码
 	 * @param content

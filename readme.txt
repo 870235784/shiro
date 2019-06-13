@@ -233,6 +233,25 @@
 第五章 编码/加密
 1.编码/解码
 	常用编码方式: BASE64
+	测试用例: 见com.tca.chapter5.BASE64Test
+2.散列算法
+3.加密/解密
+4.PasswordService/CredentialsMatcher
+	4.1 Shiro提供了PasswordService及CredentialsMatcher用于提供加密密码及验证密码服务
+		PasswordService接口:
+			public interface PasswordService {
+				//输入明文密码得到密文密码
+				String encryptPassword(Object plaintextPassword) throws IllegalArgumentException;
+			}
+		CredentialsMatcher接口:
+			public interface CredentialsMatcher {
+				//匹配用户输入的token 的凭证（未加密）与系统提供的凭证（已加密）
+				boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info);
+			}
+			
+			
+第六章 Realm及相关对象
+1.Realm
 		
 	
 
