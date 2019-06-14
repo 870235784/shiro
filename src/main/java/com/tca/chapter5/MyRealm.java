@@ -39,11 +39,12 @@ public class MyRealm extends AuthorizingRealm{
 		if (!"zhou".equals(principal)) {
 			throw new UnknownAccountException();
 		}
-//		logger.info(credentials + " 加密后: " + passwordService.encryptPassword(credentials)); 
+		logger.info(credentials + " 加密后: " + passwordService.encryptPassword(credentials)); 
 		if (!PASSWORD_ENC.equals(passwordService.encryptPassword(credentials))) {
 			throw new IncorrectCredentialsException();
 		}
-		return new SimpleAuthenticationInfo(principal, credentials, getName());
+		logger.info("getName() = " + getName()); 
+		return new SimpleAuthenticationInfo(principal, PASSWORD_ENC, getName());
 	}
 
 
